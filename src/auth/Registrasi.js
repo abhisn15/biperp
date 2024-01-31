@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function Login() {
+export default function Registrasi() {
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
 	const navigate = useNavigate();
@@ -9,9 +9,9 @@ export default function Login() {
 	const handleLoginClick = () => {
 		if (username === "Abhi" && password === "abhisn123") {
 			navigate("/home");
-			alert("Login berhasil!");
+			alert("Registrasi berhasil!");
 		} else {
-			alert("Gagal Login Coba Lagi!");
+			alert("Gagal Registrasi Coba Lagi!");
 		}
 	};
 
@@ -19,10 +19,6 @@ export default function Login() {
 		if (e.key === "Enter") {
 			handleLoginClick();
 		}
-	};
-
-	const handleRegistrasiClick = (e) => {
-		navigate('/registrasi')
 	};
 	return (
 		<div className="flex flex-col items-center justify-center h-[100dvh]">
@@ -47,11 +43,6 @@ export default function Login() {
 				<button
 					className="shadow-md border-none px-5 py-2 rounded-xl flex justify-center bg-white hover:bg-black hover:text-white"
 					onClick={handleLoginClick}>
-					Login
-				</button>
-				<button
-					className="shadow-md border-none px-5 py-2 rounded-xl flex justify-center bg-white hover:bg-black hover:text-white"
-					onClick={handleRegistrasiClick}>
 					Registrasi
 				</button>
 			</div>
